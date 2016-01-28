@@ -25,6 +25,12 @@ def beepAction(secs, sleepsecs, times):
         beep(secs)
         time.sleep(sleepsecs)
 
-while True:
-  beep(0.001);
-  time.sleep(0.001)
+println("start beep")
+try:
+    while True:
+        beep(0.005);
+        time.sleep(0.005)
+
+except:
+    print "except"
+    GPIO.cleanup()
